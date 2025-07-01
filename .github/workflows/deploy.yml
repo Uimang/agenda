@@ -45,6 +45,8 @@ jobs:
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
 
+      - run: touch ./dist/.nojekyll # Create .nojekyll file to prevent Jekyll processing
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
