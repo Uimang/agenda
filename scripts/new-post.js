@@ -43,14 +43,11 @@ if (!fs.existsSync(dirPath)) {
 }
 
 const content = `---
-title: ${args[0]}
+title: meeting-${args[0]}
 published: ${getDate()}
-description: ''
-image: ''
-tags: []
-category: ''
-draft: false 
-lang: ''
+tags: [Meeting]
+category: Meeting
+draft: false
 ---
 `
 
